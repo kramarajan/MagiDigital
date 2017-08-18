@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Magi Digital's</title>
+    <link rel="icon" type="image/gif/png/jpg" href="image/Magi.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/Styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            height: 70px;
+        }
+
+        .sitemorgin {
+            margin: 0 50px 0 50px;
+        }
+
+        .menu li {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+            color: #fff;
+            background-color: #303030;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #000000;
+        }
+
+        .navbar-nav > li > a {
+            padding: 5px 5px 5px 5px;
+        }
+
+        .logo {
+            padding-top: 5px;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+
+        .c-hyperlink {
+            color: #ffffff;
+        }
+
+        .navbar-brand {
+            padding: 0;
+        }
+
+        .navbar-inverse {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .navbar-collapse {
+            padding-right: 0px;
+            padding-left: 15px;
+        }
+
+        /*@media all and (min-width:768px)*/
+        .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+            margin-left: -10px;
+        }
+
+        .navbar-brand > img {
+            display: block;
+            width: 100px;
+            border: 0;
+            margin-left: -30px;
+        }
+
+        .footer {
+            background-color: #303030;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 60%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+
+        /*img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }*/
+
+        /* Add a hover effect (blue shadow) */
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        .condenTitle {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 0 0 0;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 5px;
+            right: 17px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: orange;
+            cursor: pointer;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 70%;
+            left: 10%;
+            margin-left: -100px;
+        }
+
+        #icon:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+            left: 5%;
+            margin-left: -10px;
+            background-color: black;
+            padding-top: 5px;
+        }
+
+        .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            right: 5%;
+            margin-right: -10px;
+            background-color: black;
+            padding-top: 5px;
+        }
+
+        /*@media screen and (min-width:768px)*/
+        .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+            width: 30px;
+            height: 30px;
+            margin-top: -10px;
+            font-size: 20px;
+        }
+
+        .well {
+            min-height: 200px;
+            padding: 19px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05);
+        }
+
+        .placeholder1 {
+            background-color: #2e8b57;
+            color: #ffffff;
+        }
+
+        .placeholder2 {
+            background-color: #05467e;
+            color: #ffffff;
+        }
+
+        .placeholder3 {
+            background-color: brown;
+            color: #ffffff;
+        }
+
+        .placeholder4 {
+            background-color: #671e75;
+            color: #ffffff;
+        }
+
+        .more {
+            float: right;
+            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        .followUs {
+            color: #ffffff;
+            margin: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid sitemorgin">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Index.html"><img src="image/Magi.jpg" width="100" height="70" alt="Logo"></a>
+                <h3 class="logo">Magi Digital's</h3>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right menu">
+                    <li><a href="Index.html" class="active">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="#" class="active">Fashion</a></li>
+                    <li><a href="#" class="active">Travel's & Booking</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img style="height: 400px" src="image/photo1.jpeg" alt="Image">
+                    <div class="carousel-caption">
+                        <h3>Sell $</h3>
+                        <p>Money Money.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img style="height: 400px" src="image/photo2.jpeg" alt="Image">
+                    <div class="carousel-caption">
+                        <h3>More Sell $</h3>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img style="height: 400px" src="image/photo3.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <h3>More Sell $</h3>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="container">
+            <h3 class="text-center">What We Do</h3><br>
+            <!--<div class="row">
+                <div class="col-sm-12">
+                    <div class="well">
+                        <p>Some text..</p>
+                    </div>
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width: 100%" alt="Image">
+                    <p class="condenTitle">Current Project</p>
+                    <div class="well placeholder1">
+                        <p style="text-indent:20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <a class="more" href="#">more...</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width: 100%" alt="Image">
+                    <p class="condenTitle">Project 2</p>
+                    <div class="well placeholder2">
+                        <p style="text-indent:20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <a class="more" href="#">more...</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width: 100%" alt="Image">
+                    <p class="condenTitle">Project 3</p>
+                    <div class="well placeholder3">
+                        <p style="text-indent:20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <a class="more" href="#">more...</a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width: 100%" alt="Image">
+                    <p class="condenTitle">Project 4</p>
+                    <div class="well placeholder4">
+                        <p style="text-indent:20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <a class="more" href="#">more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <footer class="container-fluid footer">
+        <div style="padding-top: 10px;" class="nav navbar-nav c-hyperlink">© 2017 Magi Digital's India, All rights reserved.</div>
+        <div>
+            <ul class="nav navbar-nav pull-right">
+                <li class="followUs"><span>Follow us:</span></li>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a></li>
+                <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                <li><a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.pinterest.com/" class="fa fa-pinterest"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

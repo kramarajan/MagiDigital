@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Magi Digital's</title>
+    <link rel="icon" type="image/gif/png/jpg" href="image/Magi.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/Styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            height: 70px;
+        }
+
+        .sitemorgin {
+            margin: 0 50px 0 50px;
+        }
+
+        .menu li {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+            color: #fff;
+            background-color: #303030;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #000000;
+        }
+
+        .navbar-nav > li > a {
+            padding: 5px 5px 5px 5px;
+        }
+
+        .logo {
+            padding-top: 5px;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 400px;
+        }
+
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+
+        .c-hyperlink {
+            color: #ffffff;
+        }
+
+        .navbar-brand {
+            padding: 0;
+        }
+
+        .navbar-inverse {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .navbar-collapse {
+            padding-right: 0px;
+            padding-left: 15px;
+        }
+
+        /*@media all and (min-width:768px)*/
+        .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+            margin-left: -10px;
+        }
+
+        .container {
+            width: 100%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .navbar-brand > img {
+            display: block;
+            width: 100px;
+            border: 0;
+            margin-left: -30px;
+        }
+
+        .footer {
+            background-color: #303030;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 60%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+
+        .fa-skype {
+            background: #00aff0;
+            color: white;
+        }
+
+        /*img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }*/
+
+        /* Add a hover effect (blue shadow) */
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        .condenTitle {
+            text-align: left;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 0 0 0;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 5px;
+            right: 17px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: orange;
+            cursor: pointer;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+            left: 5%;
+            margin-left: -10px;
+            background-color: black;
+            padding-top: 5px;
+        }
+
+        .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            right: 5%;
+            margin-right: -10px;
+            background-color: black;
+            padding-top: 5px;
+        }
+
+        /*@media screen and (min-width:768px)*/
+        .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+            width: 30px;
+            height: 30px;
+            margin-top: -10px;
+            font-size: 20px;
+        }
+
+        .person {
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+            width: 50%;
+            opacity: 0.7;
+        }
+
+        .person:hover {
+                border-color: #f1f1f1;
+            }
+
+        .followUs {
+            color: #ffffff;
+            margin: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid sitemorgin">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Index.html"><img src="image/Magi.jpg" width="100" height="70" alt="Logo"></a>
+                <h3 class="logo">Magi Digital's</h3>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right menu">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="About.html" class="active">About Us</a></li>
+                    <li><a href="#" class="active">Fashion</a></li>
+                    <li><a href="#" class="active">Travel's & Booking</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img style="height: 400px" src="image/photo3.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <h3>Sell $</h3>
+                        <p>Money Money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <p>
+                        <h3>About US</h3>
+                        <strong>Who Am I?</strong>
+                    </p><br>
+                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-circle person" alt="Random Name" width="250" height="180">
+                </div>
+                <div class="col-md-8">
+                    <br/>
+                    <h4>I'm Bharathi Raja</h4>
+                    <p class="text-justify" style="text-indent:20px">Commercial and fashion photographer, traveler, nature enthusiast and die-hard dreamer. Studied commerce at the madras university, towards which I still have a passion for, but I have turned to photography early on and yes, that was very much before the pixels and Instagram.</p>
+                    <h4>FUNDAMENTALS</h4>
+                    <p class="text-justify" style="text-indent:20px">
+                        Classic beauty, class, character, romantic reality, natural light, black and whites and vivid colors. I like to say that my pictures are honest. Simplicity, mixed with intimacy, elegance and energy.
+                        I undertake assignments in advertising photography, industrial photography, architecture photography, interiors & exterior photography, fashion photography, model portfolios, food photography and panoramic photography.
+                    </p>
+                    <br/>
+                    <h4>OUR PORTFOLIO</h4>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Current Project</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Project 2</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Project 3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Current Project</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Project 2</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://placehold.it/150x80?text=IMAGE" class="thumbnail" style="width: 100%" alt="Image">
+                            <p class="text-center">Project 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <footer class="container-fluid footer">
+        <div style="padding-top: 10px;" class="nav navbar-nav c-hyperlink">© 2017 Magi Digital's India, All rights reserved.</div>
+        <div>
+            <ul class="nav navbar-nav pull-right">
+                <li class="followUs"><span>Follow us:</span></li>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a></li>
+                <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
+                <li><a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.pinterest.com/" class="fa fa-pinterest"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
